@@ -40,31 +40,7 @@ namespace _04_loops
             {
                 Console.WriteLine(letter);  //5
             }
-            int age = 23;
 
-            if (age <= 18)
-
-            {
-
-                Console.WriteLine($"You are: {age}.");
-
-            }
-
-            else if (age > 18 && age <= 35)
-
-            {
-
-                Console.WriteLine($"How are you? You are: {age}.");
-
-            }
-
-            else
-
-            {
-
-                Console.WriteLine("...");
-
-            }
         }
         [TestMethod]
         public void WhileLoops()
