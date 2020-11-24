@@ -14,7 +14,7 @@ namespace _06_RepositryPattern_Repository
         Documentary,
         Bromance,
         Drama,
-        Action,
+        Action
     }
     //Plain Old C# Object  --  POCO
     public class StreamingContent

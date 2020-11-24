@@ -50,5 +50,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\06_RepositryPattern_Repository\06_RepositryPattern_Repository.csproj">
+      <Project>{29fa00ac-4bbc-4192-b142-debe30418a4e}</Project>
+      <Name>06_RepositryPattern_Repository</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
