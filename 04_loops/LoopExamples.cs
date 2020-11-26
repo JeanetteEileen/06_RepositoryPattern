@@ -12,9 +12,9 @@ namespace _04_loops
             int studentCount = 15;
 
             // 1 starting point
-            //2 Condition that while true, keeps the loop running
-            //3 What happens after each loop
-            //4 Body of the loop, what happens each iteration
+            // 2 Condition that while true, keeps the loop running
+            // 3 What happens after each loop
+            // 4 Body of the loop, what happens each iteration
 
             //for //1           //2             //3
             for (int i = 0; i < studentCount; i++) // i = i + 1 -> i++  
@@ -51,7 +51,6 @@ namespace _04_loops
             //2 the body of the loop
 
             //while  //1
-
 
             while (total != 30)
             {

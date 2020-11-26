@@ -10,7 +10,7 @@ namespace _04_Methods
         //What we do
         //Output
 
-        //Access Modifier  Return Type   Method Signature (Name and list of parameters
+        //Access Modifier  Return Type   Method Signature (Name and list of parameters)
         public int AddTwoNumbers(int numOne, int numTwo)
         {
             int sum = numOne + numTwo;

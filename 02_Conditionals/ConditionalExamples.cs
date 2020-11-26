@@ -17,6 +17,7 @@ namespace _02_Conditionals
         [TestMethod]
         public void IfElseStatements()
         {
+
             bool isTrue = true;
             if (isTrue)
             {
@@ -33,68 +34,72 @@ namespace _02_Conditionals
                 }
                 else if (age > 0)
                 {
-                    Console.WriteLine("you're not even born yet");
+                    Console.WriteLine("You're too young to be on the computer");
                 }
+                else
+                {
+                    Console.WriteLine("You're not even born yet.");
+                }
+
 
                 if (age > 65 && age < 18)
                 {
                     // And comparison||
                 }
+
                 if (age <= 65 || age >= 18)
                 {
                     //Or Comparison||
                 }
+
                 if (age == 17)
                 {
                     //is equal to
                 }
+
                 if (age != 19)
                 {
                     // Not equals to 
                     //!Bang operator
                 }
             }
-            [TestMethod]
-            public void switchcases()
-            { 
-                int age = 42;
-                switch (age)
-                {
-                    case 18:
-                        // code for if age is 18
-                        break;
-                    case 19:
-                        // code for if age is 19
-                        break;
-                    case 21:
-                    case 22:
-                    case 23:
-                        // code for 21-23
-                        break;
-                    default:
-                        // Catch all code
-                        Console.WriteLine("You are not 18-23");
-                        break;
+        }
+        [TestMethod]
+        public void switchcases()
+        {
+            int age = 42;
 
-
-                }
-            }
-            [TestMethod]
-            public void Tenaries()
+            switch (age)
             {
-                int age = 37;
-
-                //variable someVariable = (boolean statement)? trueValue : falseValue;
-
-                bool isAge = (age == 24) ? true : false;
-            }
-
-            {
-
-            }
-            {
-
+                case 18:
+                    // code for if age is 18
+                    break;
+                case 19:
+                    // code for if age is 19
+                    break;
+                case 20:
+                    //code for if age is 20
+                case 21:
+                case 22:
+                case 23:
+                    // code for 21-23
+                    break;
+                default:
+                    // Catch all code
+                    Console.WriteLine("You are not 18-23");
+                    break;
             }
         }
+
+        [TestMethod]
+        public void Ternaries()
+        {
+            int age = 37;
+
+            //variable someVariable = (boolean statement) ? trueValue : falseValue;
+
+            bool isAge = (age == 24) ? true : false;
+        }
+    
     }
 }

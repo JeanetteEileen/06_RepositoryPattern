@@ -25,6 +25,7 @@ namespace _05_Classes
         {
             Vehicle car = new Vehicle();
             car.TypeofVehicle = VehicleType.Car;
+
             Vehicle newCar = new Vehicle
             {
                 TypeofVehicle = VehicleType.Car,
