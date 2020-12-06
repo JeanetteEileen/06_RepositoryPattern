@@ -31,6 +31,7 @@ namespace _06_RepositoryPattern_Console
                     "3. View Content By Title\n" +
                     "4. Update Existing Content\n" +
                     "5. Delete Existing Content\n" +
+                    "5. Delete Existing Content\n" +
                     "6. Exit");
 
                 //Get the user's input
@@ -69,7 +70,7 @@ namespace _06_RepositoryPattern_Console
                         break;
                 }
 
-                Console.WriteLine("Please press any key to contineu...");
+                Console.WriteLine("Please press any key to continue...");
                 Console.ReadKey();
                 Console.Clear();
             }
@@ -101,8 +102,8 @@ namespace _06_RepositoryPattern_Console
             //Is Family Friendlky
             Console.WriteLine("Is this content family friendly? y/n");
             string familyFriendlyString = Console.ReadLine().ToLower();
-            
-            if(familyFriendlyString == "y")
+
+            if (familyFriendlyString == "y")
             {
                 newContent.IsFamilyFriendly = true;
             }
@@ -131,15 +132,17 @@ namespace _06_RepositoryPattern_Console
         //View Current Streaming Content that is saved
         private void DisplayAllContent()
         {
+
+            
             Console.Clear();
             List<StreamingContent> listOfContent = _contentRepo.GetContentlist();
 
-            foreach(StreamingContent content in listOfContent)
+            foreach (StreamingContent content in listOfContent)
             {
                 Console.WriteLine($"Title: {content.Title}\n" +
                     $"Description: {content.Description}");
             }
-            
+
         }
 
         //View Existing Content by title
@@ -150,13 +153,13 @@ namespace _06_RepositoryPattern_Console
             Console.WriteLine("Enter the title of the content you'd like to see:");
 
             //Get the user's input
-             string title = Console.ReadLine();
+            string title = Console.ReadLine();
 
             // Find the content by that title
             StreamingContent content = _contentRepo.GetContentByTitle(title);
 
-            // Display saud content if it isnt null
-            if(content != null)
+            // Display said content if it isnt null
+            if (content != null)
             {
                 Console.WriteLine($"Title: {content.Title}\n" +
                     $"Description: {content.Description}\n" +
@@ -231,11 +234,11 @@ namespace _06_RepositoryPattern_Console
             newContent.TypeofGenre = (GenreType)genreAsInt;
 
             // Verify the update worked
-           bool wasUpdated = _contentRepo.UpdateExistingContent(oldTitle, newContent);
+            bool wasUpdated = _contentRepo.UpdateExistingContent(oldTitle, newContent);
 
             if (wasUpdated)
             {
-                Console.WriteLine("Content was successfully updates!");
+                Console.WriteLine("Content was successfully updated!");
             }
             else
             {
@@ -246,6 +249,7 @@ namespace _06_RepositoryPattern_Console
         //Delete existing Content
         private void DeleteExistingContent()
         {
+
             DisplayAllContent();
 
             // Get the title they want to delete
